@@ -2,7 +2,7 @@ package org.example.Demo3;
 
 import com.microsoft.playwright.*;
 import com.microsoft.playwright.options.AriaRole;
-import org.junit.*;
+import org.junit.jupiter.api.*;
 
 
 public class TestExample{
@@ -13,24 +13,24 @@ public class TestExample{
 
     Page page;
 
-    @BeforeClass
+    @BeforeAll
     static public void launchBrowser() {
         playwright = Playwright.create();
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false).setSlowMo(500));
     }
 
-    @AfterClass
+    @AfterAll
     static public void closeBrowser() {
         browser.close();
     }
 
-    @Before
+    @BeforeEach
     public void createContext() {
         context = browser.newContext();
         page = context.newPage();
     }
 
-    @After
+    @AfterEach
     public void closeContext() {
         context.close();
     }
