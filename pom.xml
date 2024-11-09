@@ -30,8 +30,15 @@
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.8.2</version>
-            <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/com.deque.html.axe-core/playwright -->
+        <dependency>
+            <groupId>com.deque.html.axe-core</groupId>
+            <artifactId>playwright</artifactId>
+            <version>4.8.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>
