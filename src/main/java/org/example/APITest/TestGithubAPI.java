@@ -21,7 +21,7 @@ import static org.junit.jupiter.api.Assertions.*;
 public class TestGithubAPI {
     private static final String REPO = "test-repo-2";
     private static final String USER = "betterlucas";
-    private static final String API_TOKEN = "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";
+    private static final String API_TOKEN = System.getenv("GITHUB_API_TOKEN");
 
     private Playwright playwright;
     private APIRequestContext request;
